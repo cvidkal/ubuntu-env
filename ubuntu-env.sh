@@ -19,14 +19,11 @@ cd autojump
 echo " [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh" >> ~/.zshrc
 echo "autoload -U compinit && compinit -u" >> ~/.zshrc
 
-rm -rf ~/autojump
 # fzf
 cd 
 git clone https://github.com/junegunn/fzf.git
 cd fzf
 ./install
-
-rm -rf ~/fzf
 
 
 
