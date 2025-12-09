@@ -10,6 +10,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # zsh-autgsuggestion
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
+sed -i.bak -E '/^[[:space:]]*plugins[[:space:]]*=[[:space:]]*\([^)]*\)/ {
+    /zsh-autosuggestions/! s/\)/ zsh-autosuggestions)/
+}' ~/.zshrc
 
 # autojump
 cd 
